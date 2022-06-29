@@ -5,6 +5,9 @@ import (
 )
 
 func main() {
+	lang := get_lang("./")
+	fmt.Println(lang.String())
+
 	git := has_git("./")
 	if git {
 		fmt.Println("Is git!")

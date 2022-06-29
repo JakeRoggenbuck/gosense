@@ -8,7 +8,11 @@ import (
 )
 
 func has_git(path string) bool {
-	if _, err := os.Stat(path + "/.git"); err == nil {
+	if path[len(path)-1:] != "/" {
+		path += "/"
+	}
+
+	if _, err := os.Stat(path + ".git"); err == nil {
 		return true
 	}
 
@@ -20,7 +24,11 @@ func is_local_git(path string) bool {
 		return false
 	}
 
-	contents, err := ioutil.ReadFile(path + "/.git/config")
+	if path[len(path)-1:] != "/" {
+		path += "/"
+	}
+
+	contents, err := ioutil.ReadFile(path + ".git/config")
 	if err != nil {
 		fmt.Println(err)
 	}
