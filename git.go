@@ -1,8 +1,10 @@
 package main
 
 import (
+	"io/ioutil"
 	"os"
 	"fmt"
+	"strings"
 )
 
 func has_git(path string) bool {
@@ -18,14 +20,14 @@ func is_local_git(path string) bool {
 		return false
 	}
 
-	f, err := os.Open(path + "/.git/config")
+	contents, err := ioutil.ReadFile(path + "/.git/config")
 	if err != nil {
 		fmt.Println(err)
 	}
+
+	if !strings.Contains(string(contents), "url") {
+		return false;
+	}
 	
-	defer f.Close()
-
-
-
 	return true
 }
