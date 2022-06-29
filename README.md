@@ -14,13 +14,13 @@ Because I write projects pretty regularly in all of these languages and want a c
 ### Git
 
 ```go
-has_git(path: string) bool
-is_local_git(path: string) bool
+has_git(path string) bool
+is_local_git(path string) bool
 ```
 
 ### Language
 ```go
-get_lang(path: string) Lang
+get_lang(path string) Lang
 ```
 
 ## Example
