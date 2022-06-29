@@ -1,5 +1,7 @@
-# sense-py
+# sense-py 
 Sense the directories around you, are they git repositories, what language, etc.
+
+![Go](https://img.shields.io/appveyor/build/jakeroggenbuck/sense-go?style=for-the-badge)
 
 ## Languages
 [ :snake: sense-py](https://github.com/JakeRoggenbuck/sense-py) || [:crab: sense-rs](https://github.com/JakeRoggenbuck/sense-rs) || 
