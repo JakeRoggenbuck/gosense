@@ -1,9 +1,9 @@
 package main
 
 import (
+	"fmt"
 	"io/ioutil"
 	"os"
-	"fmt"
 	"strings"
 )
 
@@ -26,8 +26,8 @@ func is_local_git(path string) bool {
 	}
 
 	if !strings.Contains(string(contents), "url") {
-		return false;
+		return false
 	}
-	
+
 	return true
 }
