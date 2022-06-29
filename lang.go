@@ -16,7 +16,7 @@ const (
 )
 
 func (l Lang) String() string {
-	langs := [...]string{"Python", "Rust", "Java", "JavaScript", "Go", ""}
+	langs := [...]string{"Python", "Rust", "Java", "JavaScript", "Go", "None"}
 	return langs[l-1]
 }
 
