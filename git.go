@@ -1,4 +1,4 @@
-package sense_go
+package gosense
 
 import (
 	"fmt"

@@ -1,3 +1,3 @@
-module github.com/jakeroggenbuck/sense-go
+module github.com/jakeroggenbuck/gosense
 
 go 1.18
